@@ -1,0 +1,148 @@
+{% import "macros.twig" as macro %}
+
+<article itemscope="" itemtype="http://schema.org/Product">
+	<header>
+		<meta itemprop="url" content="#TODO:Url par défaut du produit" />
+		<h1 itemprop="name">Game boy classic (1989)</h1>
+		{% spaceless %}
+		<dl class="list-inline list-divided">
+			<dt>Référence</dt>
+			<dd itemprop="sku">GAMEBOY-CLASSIC</dd>
+			<dt>Marque</dt>
+			<dd><a itemprop="brand" href="http://site36.intportgchange.fr/fr/brand/Nintendo,13168.html">Nintendo</a></dd>
+			<dt>Catégorie</dt>
+			<dd><a href="http://site36.intportgchange.fr/fr/catalog/Portables,13291.html">Portables</a></dd>
+		</dl>
+		{% endspaceless %}
+	</header>
+
+	<div class="row">
+		<div class="col-sm-6 col-md-8">
+			{{ macro.visuals('13450', true, visuals) }}
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<form method="post" action="http://site36.intportgchange.fr/fr/catalog/classic-1989,13450.html">
+				<fieldset>
+					<div class="form-group">
+						<label for="declination-selector-">Déclinaisons</label>
+						<select class="form-control" id="declination-selector-" name="catalogParam[declinationId]" onchange="jQuery(this).parents('form').get(0).submit();">
+							<option value="13450" selected="selected">Game boy classic (1989)</option>
+							<option value="13453">Game boy pocket (1996)</option>
+							<option value="13456">Game boy transparente (1998)</option>
+						</select>
+					</div>
+					<input name="productId" value="13450" type="hidden" />
+					<button type="submit" class="btn btn-primary btn-sm nojs">Recharger</button>
+				</fieldset>
+			</form>
+
+			<div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+				<div class="alert availability text-center">
+					<h4 itemprop="availability">Peu de stock</h4>
+					<p itemprop="deliveryLeadTime">Expédié sous 48 heures</p>
+				</div>
+				<div class="alert alert-success availability text-center">
+					<h4 itemprop="availability">En stock</h4>
+					<p itemprop="deliveryLeadTime">Expédié sous 48 heures</p>
+				</div>
+				<div class="alert alert-danger availability text-center">
+					<h4 itemprop="availability">En rupture</h4>
+				</div>
+
+				<p itemprop="description" class="short-description">Le (ou la) Game Boy (ゲームボーイ, Gēmu Bōi) est une console de jeux vidéo portable créée par Nintendo en 1989.</p>
+
+				<ul class="list-unstyled main-price">
+					<li class="price">
+						<meta itemprop="priceCurrency" content="EUR" />
+						<span itemprop="price">85,00</span> € <span class="tax-mode">TTC</span>
+						<del title="ancien prix">90,00 €</del>
+					</li>
+					<li class="price">
+						71,07 € <span class="tax-mode">HT</span>
+						<del title="ancien prix">75,25 €</del>
+					</li>
+				</ul>
+			</div>
+
+			<p class="rating">
+				<a href="#comments-13450">Soyez le premier à commenter ce produit.</a>
+			</p>
+			<p itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/Rating" class="rating">
+				<meta itemprop="worstRating" content="1" />
+				<span itemprop="ratingValue">2,5</span> étoiles sur
+				<span itemprop="bestRating">5</span>
+				(<a href="#comments-13450"><span itemprop="ratingCount">4</span> avis</a>)
+			</p>
+
+			<form action="http://site36.intportgchange.fr/fr/action/order/AddToCart" method="post">
+				<fieldset>
+					<div class="form-group">
+						<label for="product-quantity">Quantité</label>
+						<input class="form-control" id="product-quantity" name="quantity" value="1" type="number" />
+					</div>
+					<input value="13232" name="shopId" type="hidden" />
+					<input value="13450" name="productId" type="hidden" />
+					<input value="http://site36.intportgchange.fr/fr/catalog/classic-1989,13450.html?catalogParam%5BshopId%5D=13232" name="backurl" type="hidden" />
+					<button class="btn btn-primary btn-lg" type="submit"><i class="icon-shopping-cart"></i> Ajouter au panier</button>
+				</fieldset>
+			</form>
+
+			<ul class="list-unstyled">
+				<li>
+					<a href="#TODO:AddToFavorites">Ajouter aux favoris</a>
+				</li>
+				<li>
+					<a href="#TODO:AdToComparisons">Ajouter aux comparaisons</a>
+				</li>
+			</ul>
+
+			<ul class="list-inline share-list">
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12259.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/51/fr/digg_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12261.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/52/fr/facebook_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12263.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/53/fr/delicious_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12265.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/54/fr/google_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12267.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/55/fr/twitter_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12269.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" onclick="accessibleAddToFavorite(this); return false;" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/56/fr/favorites_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12271.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" onclick="accessiblePrint(this); return false;" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/57/fr/print_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+				<li>
+					<a href="http://site36.intportgchange.fr/fr/partage-de-lien/site-12273.html?title=classic%20(1989)%20de%20Nintendo%2C%20Portables%20%3A%20Site%20de%20d%C3%A9monstration&amp;url=http%3A%2F%2Fsite36.intportgchange.fr%2Ffr%2Fcatalog%2Fclassic-1989%2C13450.html%3FcatalogParam%255BshopId%255D%3D13232" rel="nofollow"><img src="http://site36.intportgchange.fr/publicmedia/formatted/122/58/fr/email_16x16.png;h=16,w=16.png" alt=""></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<h2>Description complète</h2>
+	<div itemprop="description">
+		<p>Le (ou la) Game Boy (ゲームボーイ, Gēmu Bōi) est une console de jeux vidéo portable créée par Nintendo en 1989. (<a href="http://fr.wikipedia.org/wiki/Gameboy">Voir l'article Wikipedia</a>)</p>
+	</div>
+
+	<h2>Attributs dynamiques - sans groupes</h2>
+
+	{{ macro.attributes(product, 'flat') }}
+
+	<h2>Attributs dynamiques - avec groupes (accordéon)</h2>
+
+	{{ macro.attributes(product, 'accordion') }}
+
+	<h2>Attributs dynamiques - avec groupes (onglets)</h2>
+
+	{{ macro.attributes(product, 'tabs') }}
+
+	<h2>Attributs dynamiques - avec groupes (tableau)</h2>
+
+	{{ macro.attributes(product, 'table') }}
+</article>

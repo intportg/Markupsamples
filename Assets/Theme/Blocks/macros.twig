@@ -1,0 +1,271 @@
+{% macro visuals(contextId, activateZoom, visuals) %}
+	<!-- TODO: handle visuals -->
+	<div class="visuals">
+		<ul class="list-unstyled full-visuals">
+			<li id="full-visual-{{ contextId }}-13248">
+				{% if (activateZoom) %}<script type="text/javascript">
+					/* <![CDATA[ */
+					/*jQuery(document).ready(function(){
+						jQuery('#full-visual-{{ contextId }}-13248 a').easyZoom({
+							id: 'full-visual-{{ contextId }}-13248',
+							parent: '#full-visual-{{ contextId }}-13248',
+							preload: '<p class="preloader">Chargement de l\'image en cours...</p>'
+						});
+					});*/
+					/* ]]> */
+				</script>
+				<a href="http://site36.intportgchange.fr/publicmedia/original/132/48/fr/GAMEBOY-CLASSIC-PIC1.jpg">{% endif %}
+					<img itemprop="image" src="http://site36.intportgchange.fr/publicmedia/formatted/132/48/fr/GAMEBOY-CLASSIC-PIC1.jpg;maxh=405,maxw=540.jpg" alt="" />
+			{% if (activateZoom) %}</a>{% endif %}
+			</li>
+			<li id="full-visual-{{ contextId }}-13249">
+				{% if (activateZoom) %}<script type="text/javascript">
+					/* <![CDATA[ */
+					/*jQuery(document).ready(function(){
+						jQuery('#full-visual-{{ contextId }}-13249 a').easyZoom({
+							id: 'full-visual-{{ contextId }}-13249',
+							parent: '#full-visual-{{ contextId }}-13249',
+							preload: '<p class="preloader">Chargement de l\'image en cours...</p>'
+						});
+					});*/
+					/* ]]> */
+				</script>
+				<a href="http://site36.intportgchange.fr/publicmedia/original/132/49/fr/GAMEBOY-CLASSIC-PIC2.png">{% endif %}
+					<img itemprop="image" src="http://site36.intportgchange.fr/publicmedia/formatted/132/49/fr/GAMEBOY-CLASSIC-PIC2.png;maxh=405,maxw=540.png" alt="" />
+				{% if (activateZoom) %}</a>{% endif %}
+			</li>
+		</ul>
+		<ul class="list-inline thumbnail-visuals">
+			<li class="thumbnail" id="thumbnail-visual-{{ contextId }}-13248" title="Cliquer ici pour agrandir l'image">
+				<img src="http://site36.intportgchange.fr/publicmedia/formatted/132/48/fr/GAMEBOY-CLASSIC-PIC1.jpg;maxh=60,maxw=80.jpg" alt="" />
+			</li>
+			<li class="thumbnail" id="thumbnail-visual-{{ contextId }}-13249" title="Cliquer ici pour agrandir l'image">
+				<img src="http://site36.intportgchange.fr/publicmedia/formatted/132/49/fr/GAMEBOY-CLASSIC-PIC2.png;maxh=60,maxw=80.png" alt="" />
+			</li>
+		</ul>
+		<script type="text/javascript">
+			/* <![CDATA[ */
+			registerDOMLoadedCallback(function (selectorPrefix) {
+				jQuery(selectorPrefix + "[id^='thumbnail-visual']").click(function () {
+					var blockId = jQuery(this).attr('id');
+					var blockId = blockId.substring('thumbnail-visual-'.length);
+					jQuery("[id^='full-visual']").hide();
+					jQuery('#full-visual-'+blockId).show();
+					return false;
+				});
+			});
+			/* ]]> */
+		</script>
+	</div>
+{% endmacro %}
+
+{% macro attributes(product, mode) %}
+	{% if mode == 'flat' %}
+		<dl class="dl-horizontal">
+			<dt>Propriété 1.1</dt>
+			<dd>Valeur 1.1</dd>
+			<dt>Propriété 1.2</dt>
+			<dd>Valeur 1.2</dd>
+			<dt>Propriété 1.3</dt>
+			<dd>Valeur 1.3</dd>
+			<dt>Propriété 1.4</dt>
+			<dd>Valeur 1.4</dd>
+			<dt>Propriété 2.1</dt>
+			<dd>Valeur 2.1</dd>
+			<dt>Propriété 2.2</dt>
+			<dd>Valeur 2.2</dd>
+			<dt>Propriété 2.3</dt>
+			<dd>Valeur 2.3</dd>
+			<dt>Propriété 2.4</dt>
+			<dd>Valeur 2.4</dd>
+			<dt>Propriété 3.1</dt>
+			<dd>Valeur 3.1</dd>
+			<dt>Propriété 3.2</dt>
+			<dd>Valeur 3.2</dd>
+			<dt>Propriété 3.3</dt>
+			<dd>Valeur 3.3</dd>
+			<dt>Propriété 3.4</dt>
+			<dd>Valeur 3.4</dd>
+		</dl>
+	{% elseif mode == 'accordion' %}
+		<div class="accordion" id="product-13450-attribute-group-accordion">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#product-13450-attribute-group-accordion" href="#product-13450-attribute-group-1">
+						Groupe de propriétés 1
+					</a>
+				</div>
+				<div id="product-13450-attribute-group-1" class="accordion-body collapse in">
+					<div class="accordion-inner">
+						<dl class="dl-horizontal">
+							<dt>Propriété 1.1</dt>
+							<dd>Valeur 1.1</dd>
+							<dt>Propriété 1.2</dt>
+							<dd>Valeur 1.2</dd>
+							<dt>Propriété 1.3</dt>
+							<dd>Valeur 1.3</dd>
+							<dt>Propriété 1.4</dt>
+							<dd>Valeur 1.4</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#product-13450-attribute-group-accordion" href="#product-13450-attribute-group-2">
+						Groupe de propriétés 2
+					</a>
+				</div>
+				<div id="product-13450-attribute-group-2" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<dl class="dl-horizontal">
+							<dt>Propriété 2.1</dt>
+							<dd>Valeur 2.1</dd>
+							<dt>Propriété 2.2</dt>
+							<dd>Valeur 2.2</dd>
+							<dt>Propriété 2.3</dt>
+							<dd>Valeur 2.3</dd>
+							<dt>Propriété 2.4</dt>
+							<dd>Valeur 2.4</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#product-13450-attribute-group-accordion" href="#product-13450-attribute-group-3">
+						Groupe de propriétés 3
+					</a>
+				</div>
+				<div id="product-13450-attribute-group-3" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<dl class="dl-horizontal">
+							<dt>Propriété 3.1</dt>
+							<dd>Valeur 3.1</dd>
+							<dt>Propriété 3.2</dt>
+							<dd>Valeur 3.2</dd>
+							<dt>Propriété 3.3</dt>
+							<dd>Valeur 3.3</dd>
+							<dt>Propriété 3.4</dt>
+							<dd>Valeur 3.4</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% elseif  mode == 'tabs' %}
+		<ul id="product-13450-attribute-group-tabs" class="nav nav-tabs">
+			<li><a href="#product-13450-attribute-group-tab-1" data-toggle="tab">Groupe de propriétés 1</a></li>
+			<li class="active"><a href="#product-13450-attribute-group-tab-2" data-toggle="tab">Groupe de propriétés 2</a></li>
+			<li><a href="#product-13450-attribute-group-tab-3" data-toggle="tab">Groupe de propriétés 3</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="product-13450-attribute-group-tab-1" class="tab-pane fade">
+				<dl class="dl-horizontal">
+					<dt>Propriété 1.1</dt>
+					<dd>Valeur 1.1</dd>
+					<dt>Propriété 1.2</dt>
+					<dd>Valeur 1.2</dd>
+					<dt>Propriété 1.3</dt>
+					<dd>Valeur 1.3</dd>
+					<dt>Propriété 1.4</dt>
+					<dd>Valeur 1.4</dd>
+				</dl>
+			</div>
+			<div id="product-13450-attribute-group-tab-2" class="tab-pane fade active in">
+				<dl class="dl-horizontal">
+					<dt>Propriété 2.1</dt>
+					<dd>Valeur 2.1</dd>
+					<dt>Propriété 2.2</dt>
+					<dd>Valeur 2.2</dd>
+					<dt>Propriété 2.3</dt>
+					<dd>Valeur 2.3</dd>
+					<dt>Propriété 2.4</dt>
+					<dd>Valeur 2.4</dd>
+				</dl>
+			</div>
+			<div id="product-13450-attribute-group-tab-3" class="tab-pane fade">
+				<dl class="dl-horizontal">
+					<dt>Propriété 3.1</dt>
+					<dd>Valeur 3.1</dd>
+					<dt>Propriété 3.2</dt>
+					<dd>Valeur 3.2</dd>
+					<dt>Propriété 3.3</dt>
+					<dd>Valeur 3.3</dd>
+					<dt>Propriété 3.4</dt>
+					<dd>Valeur 3.4</dd>
+				</dl>
+			</div>
+		</div>
+		<script type="text/javascript">
+			/* <![CDATA[ */
+			jQuery('#product-13450-attribute-groups a').click(function (e) {
+				e.preventDefault();
+				jQuery(this).tab('show');
+			});
+			/* ]]> */
+		</script>
+	{% elseif  mode == 'table' %}
+		<table class="table table-striped table-bordered">
+			<tbody>
+				<tr>
+					<th colspan="2">Groupe de propriétés 1</th>
+				</tr>
+				<tr>
+					<td class="col-xs-6 col-sm-5 col-md-4 col-lg-3">Propriété 1.1</td>
+					<td class="col-xs-6 col-sm-7 col-md-8 col-lg-9">Valeur 1.1</td>
+				</tr>
+				<tr>
+					<td>Propriété 1.2</td>
+					<td>Valeur 1.2</td>
+				</tr>
+				<tr>
+					<td>Propriété 1.3</td>
+					<td>Valeur 1.3</td>
+				</tr>
+				<tr>
+					<td>Propriété 1.4</td>
+					<td>Valeur 1.4</td>
+				</tr>
+				<tr>
+					<th colspan="2">Groupe de propriétés 2</th>
+				</tr>
+				<tr>
+					<td>Propriété 2.1</td>
+					<td>Valeur 2.1</td>
+				</tr>
+				<tr>
+					<td>Propriété 2.2</td>
+					<td>Valeur 2.2</td>
+				</tr>
+				<tr>
+					<td>Propriété 2.3</td>
+					<td>Valeur 2.3</td>
+				</tr>
+				<tr>
+					<td>Propriété 2.4</td>
+					<td>Valeur 2.4</td>
+				</tr>
+				<tr>
+					<th colspan="2">Groupe de propriétés 3</th>
+				</tr>
+				<tr>
+					<td>Propriété 3.1</td>
+					<td>Valeur 3.1</td>
+				</tr>
+				<tr>
+					<td>Propriété 3.2</td>
+					<td>Valeur 3.2</td>
+				</tr>
+				<tr>
+					<td>Propriété 3.3</td>
+					<td>Valeur 3.3</td>
+				</tr>
+				<tr>
+					<td>Propriété 3.4</td>
+					<td>Valeur 3.4</td>
+				</tr>
+			</tbody>
+		</table>
+	{% endif %}
+{% endmacro %}
