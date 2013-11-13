@@ -21,7 +21,7 @@ class XhtmlTemplate extends Block
 	protected function parameterize($event)
 	{
 		$parameters = parent::parameterize($event);
-		$parameters->addParameterMeta('templateName', Property::TYPE_STRING, true, 'xhtml-buttons.twig');
+		$parameters->addParameterMeta('templateName', 'xhtml-buttons.twig');
 
 		$parameters->setLayoutParameters($event->getBlockLayout());
 		return $parameters;

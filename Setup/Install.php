@@ -4,36 +4,26 @@ namespace Intportg\Markupsamples\Setup;
 /**
  * @name \Intportg\Markupsamples\Setup\Install
  */
-class Install
+class Install extends \Change\Plugins\InstallBase
 {
 	/**
 	 * @param \Change\Plugins\Plugin $plugin
 	 * @param \Change\Application $application
+	 * @param \Change\Configuration\EditableConfiguration $configuration
 	 * @throws \RuntimeException
 	 */
-	public function executeApplication($plugin, $application)
+	public function executeApplication($plugin, $application, $configuration)
 	{
-		/* @var $config \Change\Configuration\EditableConfiguration */
-		$config = $application->getConfiguration();
-		$config->addPersistentEntry('Change/Events/BlockManager/Intportg_Markupsamples', '\\Intportg\\Markupsamples\\Blocks\\ListenerAggregate');
+		$configuration->addPersistentEntry('Change/Events/BlockManager/Intportg_Markupsamples', '\Intportg\Markupsamples\Blocks\ListenerAggregate');
 	}
 
 	/**
 	 * @param \Change\Plugins\Plugin $plugin
-	 * @param \Change\Application\ApplicationServices $applicationServices
-	 * @param \Change\Documents\DocumentServices $documentServices
-	 * @param \Change\Presentation\PresentationServices $presentationServices
+	 * @param \Change\Services\ApplicationServices $applicationServices
 	 * @throws \Exception
 	 */
-	public function executeServices($plugin, $applicationServices, $documentServices, $presentationServices)
+	public function executeServices($plugin, $applicationServices)
 	{
-		$presentationServices->getThemeManager()->installPluginTemplates($plugin);
-	}
-
-	/**
-	 * @param \Change\Plugins\Plugin $plugin
-	 */
-	public function finalize($plugin)
-	{
+		$applicationServices->getThemeManager()->installPluginTemplates($plugin);
 	}
 }
