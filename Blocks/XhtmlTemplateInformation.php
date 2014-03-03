@@ -15,6 +15,7 @@ class XhtmlTemplateInformation  extends \Change\Presentation\Blocks\Information
 	{
 		parent::onInformation($event);
 		$this->setLabel('Template XHTML');
-		$this->addInformationMeta('templateName', Property::TYPE_STRING, true, 'xhtml-buttons.twig');
+		$this->addInformationMeta('templateName', Property::TYPE_STRING, true, 'xhtml-buttons.twig')
+			->setLabel('Template');
 	}
 }

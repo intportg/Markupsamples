@@ -1,0 +1,10 @@
+{
+	"/Intportg/Markupsamples/": {
+		"module": "Intportg_Markupsamples",
+		"name": "home",
+		"rule": {
+			"redirectTo": "/404"
+		},
+		"auto": true
+	}
+}
